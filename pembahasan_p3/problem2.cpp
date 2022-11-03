@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int arr[10000000];
+int arr[10000000000];
 
 int main()
 {
     int n, midval;
-    float result;
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++)
@@ -27,27 +26,21 @@ int main()
         }
     }
 
-    printf("\n");
-
     for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
 
-    printf("\n");
+    midval = n / 2;
 
     if (n % 2 == 0)
     {
-        midval = n / 2;
-        result = (arr[midval] + arr[midval - 1]) / 2;
-        printf("%.1f", result);
+        printf("\n%.1f", (float)(arr[midval] + arr[midval - 1]) / 2);
     }
 
     else
     {
-        midval = n / 2;
-        result = arr[midval];
-        printf("%.1f", result);
+        printf("\n%.1f", (float)arr[midval]);
     }
 
     return 0;
