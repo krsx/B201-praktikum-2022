@@ -1,1 +1,2 @@
-u
+
+    srand(time(0));
